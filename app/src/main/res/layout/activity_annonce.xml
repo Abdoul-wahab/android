@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnnoncePage">
+
+
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:navigationIcon="?attr/homeAsUpIndicator" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="233dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_border"
+                android:onClick="imageList"
+                android:scaleType="centerCrop"
+                android:transitionName="transitionAnnonceImage"
+                tools:ignore="ContentDescription,UnusedAttribute" />
+
+            <LinearLayout
+                android:id="@+id/proprieteDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0016D130"
+                android:backgroundTint="#00463030"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#005A3B3B"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="350 000 €"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/pseudo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:hint="pesudo"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/vid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-2dp"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/ville"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-2dp"
+                        android:background="#00533434"
+                        android:hint="ville"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-2dp"
+                        android:hint="ici la date"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_border"
+                    android:text="Titre ici "
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="141dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/btn_border"
+                        android:text="Description ici"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/proprieteVendeurWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg_sans_coleur"
+                android:orientation="vertical"
+                android:padding="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="mContact"
+                    android:text="carl@immo.com"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="tContact"
+                    android:text="+33 6 17 64 69 85"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="0dp">
+
+                    <ImageButton
+                        android:id="@+id/makeAnnonceFavorite"
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Make this annonce favorite"
+                        android:onClick="saveAnnonce"
+                        android:src="@drawable/ic_favorite_border"
+                        android:tint="@color/black"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,OnClick" />
+
+                    <ImageButton
+                        android:id="@+id/removeAnnonceFavorite"
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Remove this annonce from favorites"
+                        android:src="@drawable/ic_favorite_selected"
+                        android:tint="@color/red"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="-41dp">
+
+                    <Button
+                        android:id="@+id/addImage"
+                        android:layout_width="299dp"
+                        android:layout_height="38dp"
+                        android:background="#C8D7E2"
+                        android:onClick="stockAnnonce"
+                        android:text="Stocker l'annonce" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

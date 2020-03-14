@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context=".AddImage">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <ImageView
+        android:id="@+id/imageChoose"
+        android:layout_width="174dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/bnChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg"
+        android:text="Gallerie"
+        app:layout_constraintBottom_toBottomOf="@+id/bnUpload"
+        app:layout_constraintEnd_toStartOf="@+id/bnUpload"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/imageChoose" />
+
+    <Button
+        android:id="@+id/bnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/layout_bg"
+        android:text="Camera"
+        app:layout_constraintEnd_toEndOf="@+id/imageChoose"
+        app:layout_constraintTop_toBottomOf="@+id/imageChoose" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="176dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/layout_bg"
+        android:layout_marginEnd="8dp"
+        android:text="Enregistrer"
+        android:onClick="send"
+        app:layout_constraintEnd_toEndOf="@+id/bnUpload"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bnChoose"
+        app:layout_constraintTop_toBottomOf="@+id/bnChoose"
+        tools:ignore="OnClick" />
+</android.support.constraint.ConstraintLayout>

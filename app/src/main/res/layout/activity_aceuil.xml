@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context=".Aceuil">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="go"
+        android:text="Voir Annoce"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/profil"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="save"
+        android:text="PROFIL"
+        app:layout_constraintEnd_toEndOf="@+id/ann_hasard"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ann_hasard"
+        app:layout_constraintTop_toBottomOf="@+id/ann_hasard"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/profil2"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="create"
+        android:text="Creer une annonce"
+        app:layout_constraintEnd_toEndOf="@+id/profil"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profil"
+        app:layout_constraintTop_toBottomOf="@+id/profil"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/myListe"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="mesAnnonces"
+        android:text="Mes annonces"
+        app:layout_constraintEnd_toEndOf="@+id/profil2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profil2"
+        app:layout_constraintTop_toBottomOf="@+id/profil2"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/ann_hasard"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="liste"
+        android:text="Liste d'annonce"
+        app:layout_constraintEnd_toEndOf="@+id/b1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+    <Button
+        android:id="@+id/listStock"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/layout_bg_sans_coleur"
+        android:onClick="annoncesStock"
+        android:text="Mes annonces Stockés"
+        app:layout_constraintEnd_toEndOf="@+id/profil2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profil2"
+        app:layout_constraintTop_toBottomOf="@+id/profil2"
+        tools:ignore="OnClick" />
+
+</android.support.constraint.ConstraintLayout>
